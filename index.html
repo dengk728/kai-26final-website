@@ -1,0 +1,172 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kai's Portfolio Home Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="font-outfit-normal">
+
+  <nav>
+  <div class="nav-content">
+  <a href="index.html">Home</a>
+  <a href="page01-project-clothes-is-clothes.html">Main Projects</a>
+  <a href="about.html">Others</a>
+  <li class="dropdown">
+      <a href="#">Contact</a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="https://www.instagram.com/kkai1577/" target="_blank">
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href="mailto:dengk728@newschool.edu">
+            Email
+          </a>
+        </li>
+
+        <li>
+          <a href="www.linkedin.com/in/kai-deng-0a0185307" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+  </div>
+  </nav>
+
+<div class="hero"> <img src="project-clothes-is-clothes/still-scene.png" alt="3D rendering scene of project Clothes is Clothes"; style="width:100%" ></div>
+<div class="logo">
+  <img src="kai-logo-white.png" alt="Kai's logo" style="width: 70px">
+  <h2>Kai Deng</h2>
+</div>
+
+
+<div class="side-panel" id="panel">
+  <div class="bio">
+    <h3 style="padding-bottom: 20px;">Kai Deng</h3>
+    <p >Practice design with a comprehensive vision combining garment construction, visual communication and 3D techniques. </p>
+    <p style="padding-bottom: 100px">Broad skill-set developed through cross-field experience including supporting in-studio fashion collection, photography
+production and branding.</p>
+<!-- EDUCATION -->
+   <div >
+     <div class="note-text">Parsons School of Design </div>
+     <div class="note-text">Fashion Design Major & Photography Minor</div>
+     <div class="note-text"; style="padding-bottom: 40px"> BFA, 2027</div>
+   </div>
+   <!-- Notes align right-->
+   <div>
+   <!-- CONTACT -->
+   <div class="note-text">(332) 600-9741</div>
+   <div class="note-text">dengk728@newschool.edu</div>
+   <!-- icon bar-->
+   <div class="icon-bar";>
+       <a href="https://www.instagram.com/kkai1577/">
+        <img width="24" height="24" src="contact-icon/icons8-instagram-50.png" alt="instagram: @kkai1577";style="height:24px;">
+      </a>
+       <a href="www.linkedin.com/in/kai-deng-0a0185307">
+        <img width="24" height="24"src="contact-icon/icons8-linkedin-50.png" alt="Linkedin";>
+        </a>
+   </div>
+ </div>
+  </div>
+</div >
+  <div class="container" >
+ <div class="content-column"; >
+  <div ><h3>MAIN PROJECT</h3></div>
+  <div class="card">
+   <a href="page01-project-clothes-is-clothes.html">
+   <img src="content/content-clothes-is-clothes.jpg" alt="" >
+   <div class="overlay">
+      <h2>CLOTHES is Clothes</h2>
+      <p style="font-weight:270 ;">A collection solely made by manipulating stretch on a square of fabric without cut.</p>
+    </div>
+  </a>
+  </div>
+  
+<div class="card">
+  <a href="page02-project-vein.html">
+    <img src="content/vein-hero.jpg" alt="">
+    </a>
+      <div class="overlay">
+      <h2>VEIN</h2>
+      <p>An unisex collection all with a same template connecting in different ways.</p>
+    </div>
+    </div>
+
+     <div class="card">
+   <a href="page03-project-silently-instruct.html">
+  <img src="content/content-silently-instruct.jpg" alt="">
+   <div class="overlay">
+      <h2>Silently Instruct</h2>
+      <p style="font-weight:270 ;">A fusion of the suiting’s decency with the protectiveness of outerwear, active wear and adaptive wear.</p>
+    </div>
+  </a>
+  </div>
+
+</div>
+
+ <div class="content-column";>
+    <div ><h3>EDITORIAL</h3></div>
+    <div class="img-content"></div>
+
+  <img class="img-content" src="editorial/cover.jpg" alt="">
+     <div style="padding-top:10px; "><h3>PHOTOGRAPHY</h3></div>
+ <img src="photography/Project_20240929_0010.jpg" alt="">
+      <div style="padding-top:10px;"><h3>OTHERS</h3></div>
+
+ </div>
+</div>
+
+</div>
+
+<script>
+
+const panel = document.getElementById('panel');
+const hero = document.querySelector('.hero');
+const bio = document.getElementById('bio');
+
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const heroHeight = hero.offsetHeight;
+
+
+  // 1. Panel appears after hero
+  if (scrollY > heroHeight * 0.1) {
+    panel.classList.add('active');
+  } else {
+    panel.classList.remove('active');
+  }
+
+
+
+  if(scrollY > heroHeight * 1.2 && window.innerWidth < 600)
+  {
+    panel.classList.add('narrow');
+  } else {
+    panel.classList.remove('narrow');
+  }
+  
+  if (scrollY > heroHeight * 1.2) {
+    hero.classList.add('scrollable');
+  } else {
+    panel.classList.remove('scrollable');
+  };
+
+ if (scrollY > heroHeight *1.2) {
+    bio.classList.add('collapse');
+  } else {
+    bio.classList.remove('collapse');
+  }
+  });
+</script>
+
+</body>
+</html>
